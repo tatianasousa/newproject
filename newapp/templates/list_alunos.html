@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List</title>
+    </head>
+    <body>
+        <h1>Alunos</h1>
+        {% for aluno in alunos %}
+            <h2>{{aluno.nome}}</h2>
+            <p>{{aluno.matricula}}</p>
+            <p>{{aluno.sexo}}</p>
+            <p>{{aluno.dt_nascimento}}</p>
+            <p>{{aluno.escola.nome}}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_aluno' %}">Add aluno</a>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List Filmes</title>
+    </head>
+    <body>
+        <h1>Filmes</h1>
+        {% for filme in filmes %}
+            <h2>{{filme.titulo}}</h2>
+            <p>{{filme.ano}}</p>
+            {% for ator in filme.atores.all %}
+                <p>{{ator.nome}}</p>
+            {% endfor %}
+        {% endfor %}
+
+        <a href="{% url 'add_filme' %}">Add filme</a>
+    </body>
+</html>

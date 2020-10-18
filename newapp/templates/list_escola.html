@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List</title>
+    </head>
+    <body>
+        <h1>Escolas</h1>
+        <ol>
+            {% for escola in escolas %}
+                <li>{{escola.nome}}</li>
+            {% endfor %}
+        </ol>
+
+        <a href="{% url 'add_escola' %}">Add escola</a>
+    </body>
+</html>

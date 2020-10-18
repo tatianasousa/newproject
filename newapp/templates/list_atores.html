@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List Atores</title>
+    </head>
+    <body>
+        <h1>Atores</h1>
+        {% for ator in atores %}
+            <h2>{{ator.nome}}</h2>
+        {% endfor %}
+
+        <a href="{% url 'add_ator' %}">Add ator</a>
+    </body>
+</html>
